@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Gem, Globe2, Handshake, KeyRound, Sparkles } from "lucide-react";
+import { Building2, Hammer, Handshake, Layers, ShieldCheck } from "lucide-react";
 import heroAbout from "@/assets/hero-about.jpg";
 import presenceMap from "@/assets/presence-map.png";
 import prodevFull from "@/assets/logo-prodev-full.png";
 import nawanderLogo from "@/assets/logo-nawander.png";
+import leaderNitin from "@/assets/leader-nitin.jpg";
+import leaderNamrata from "@/assets/leader-namrata.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -18,19 +20,27 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-const leaders = [
+const leaders: Array<{
+  name: string;
+  group: string;
+  bio: string;
+  initials: string;
+  image?: string | null;
+}> = [
   {
     name: "Namrata Malu",
     group: "PRO-DEV",
-    bio: "Brings nearly three decades of PRO-DEV's redevelopment experience — quality construction and dependable delivery across Mumbai and Goa.",
+    bio: "Namrata Malu is a real estate entrepreneur with 15+ years of experience spanning development, investment banking, and hospitality. With a focus on second-home markets, she brings a global perspective to identifying opportunities, developing distinctive properties, and creating compelling propositions that balance lifestyle aspirations, investment potential, and long-term value across diverse markets.",
     initials: "NM",
+    image: leaderNamrata,
   },
 
   {
     name: "Nitinkumar Nawander",
     group: "Nawander Group",
-    bio: "Grounds Nawander Group's design ambitions in practical, on-the-ground construction execution across Pune and Latur.",
+    bio: "Nitin Nawander is a real estate entrepreneur with 20+ years of experience across construction, government projects, and land acquisition. Pairing financial acumen with a veteran businessman’s all-round perspective, he shapes Nawander Group’s strategic growth and leads as President of CREDAI Bidar chapter, after serving as Honorary Secretary of BAI Latur.",
     initials: "NN",
+    image: leaderNitin,
   },
 ];
 
@@ -42,11 +52,31 @@ const cities = [
 ];
 
 const foundations = [
-  { title: "National Presence", description: "A thoughtful footprint across Maharashtra, shaped by local insight and long-term commitment.", icon: Globe2 },
-  { title: "Iconic Collaborations", description: "Trusted partnerships that bring considered design, exceptional quality and lasting value to life.", icon: Handshake },
-  { title: "Hospitality-Driven", description: "Homes and spaces designed around comfort, care and the details that make everyday living exceptional.", icon: KeyRound },
-  { title: "Lifestyle Amenities", description: "Curated experiences that create a richer, more connected way to live.", icon: Sparkles },
-  { title: "Global Trust", description: "A reputation built on transparency, consistency and a standard that travels well.", icon: Gem },
+  {
+    title: "Proven Development",
+    description: "Decades of experience delivering residential, redevelopment, plotted, commercial, and infrastructure projects.",
+    icon: Building2,
+  },
+  {
+    title: "Expertise across asset classes",
+    description: "Extensive knowledge across Tier I and Tier II markets, enabling developments that are both relevant and future-ready.",
+    icon: Layers,
+  },
+  {
+    title: "End-to-End Execution",
+    description: "From land acquisition and planning to approvals, construction, and handover—expertise across the entire development lifecycle.",
+    icon: Hammer,
+  },
+  {
+    title: "Strong Industry Relationships",
+    description: "Long-standing partnerships with architects, consultants, contractors, financial institutions, and regulatory authorities.",
+    icon: Handshake,
+  },
+  {
+    title: "Legacy of Trust",
+    description: "Built on a reputation for transparency, quality craftsmanship, timely execution, and lasting customer relationships.",
+    icon: ShieldCheck,
+  },
 ];
 
 function About() {
@@ -111,7 +141,7 @@ function About() {
                   </div>
                   <h3 className="mt-4 font-serif text-3xl md:text-4xl text-[#FBF1E9] font-bold tracking-tight">A legacy of renewal.</h3>
                   <p className="mt-4 max-w-md leading-relaxed text-[#FBF1E9]/90 text-sm md:text-base font-normal">
-                    For nearly three decades, PRO-DEV has shaped redevelopment in Mumbai and Goa, creating reliable, well-crafted spaces with a clear focus on quality and delivery.
+                    Led by founders with nearly three decades of combined experience, PRO-DEV has developed refined, enduring homes across Mumbai and Goa, driven by craftsmanship, uncompromising quality and a promise of on-time delivery.
                   </p>
                 </div>
               </div>
@@ -126,7 +156,7 @@ function About() {
                   </div>
                   <h3 className="mt-4 font-serif text-3xl md:text-4xl text-[#3D2822] font-bold tracking-tight">A vision for growth.</h3>
                   <p className="mt-4 max-w-md leading-relaxed text-[#3D2822]/85 text-sm md:text-base font-normal">
-                    Nawander Group has earned its reputation through considered residential and township development across Pune and Latur, combining ambition with practical execution.
+                    Rooted in trust and driven by ambition, Nawander Group creates self-sufficient residential communities and townships across Maharashtra, where thoughtful planning meets dependable execution.
                   </p>
                 </div>
               </div>
@@ -161,34 +191,30 @@ function About() {
       {/* LEADERSHIP — magazine profiles */}
       <section className="pt-8 md:pt-12 pb-16 md:pb-24">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10 mb-12 md:mb-16">
-            <div className="lg:col-span-5">
-              <div className="text-[10px] tracking-[0.35em] uppercase text-brick mb-4">— 04 / Leadership</div>
-              <h2 className="font-serif" style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", lineHeight: 1.05 }}>
-                The people behind
-                <br />
-                the <em className="italic text-brick">promise</em>.
-              </h2>
-            </div>
-            <p className="lg:col-span-7 lg:pt-8 text-lg text-muted-foreground leading-relaxed">
-              Our leadership brings together experienced professionals with deep knowledge in
-              development, construction, planning and customer relations — a collective
-              vision that ensures every project is delivered with transparency and quality.
-            </p>
+          <div className="max-w-xl mb-12 md:mb-16">
+            <div className="text-[10px] tracking-[0.35em] uppercase text-brick mb-4">— 04 / Leadership</div>
+            <h2 className="font-serif" style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", lineHeight: 1.05 }}>
+              The people behind
+              <br />
+              the <em className="italic text-brick">promise</em>.
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-14">
             {leaders.map((l, i) => (
               <article key={l.name} className="flex flex-col group">
-                <div className="relative aspect-[4/3] max-w-md w-full overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-brick via-brick to-cocoa flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
-                    <span className="font-serif text-[5rem] sm:text-[6rem] text-cream/95 leading-none">{l.initials}</span>
-                  </div>
-                  <div className="absolute inset-3 border border-cream/30 pointer-events-none" />
-                  <div className="absolute top-4 left-4 text-[10px] tracking-[0.3em] uppercase text-cream/80">
-                    Fig. 0{i + 1}
-                  </div>
-                  <div className="absolute bottom-4 right-4 v-text text-cream/70">{l.group}</div>
+                <div className="relative aspect-[4/3] max-w-md w-full overflow-hidden bg-cocoa/10">
+                  {l.image ? (
+                    <img
+                      src={l.image}
+                      alt={l.name}
+                      className="w-full h-full object-cover object-[center_18%] transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-brick via-brick to-cocoa flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                      <span className="font-serif text-[5rem] sm:text-[6rem] text-cream/95 leading-none">{l.initials}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="mt-8">
                   <div className="eyebrow">{l.group}</div>

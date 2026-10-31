@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
-  BadgeCheck,
-  Building2,
-  GraduationCap,
-  Hammer,
-  HandHeart,
-  HeartHandshake,
+  Clock,
+  Compass,
+  Leaf,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
   ChevronLeft,
   ChevronRight,
   Star,
@@ -47,12 +47,36 @@ function useReveal() {
 }
 
 const promises = [
-  { title: "Build With Purpose", description: "Spaces created with intent, meaning and long-term impact.", icon: Hammer },
-  { title: "Sustainable by Design", description: "Solar energy and rainwater harvesting integrated into every development.", icon: Building2 },
-  { title: "Quality You Can Trust", description: "A commitment to excellence in every detail, built with responsibility.", icon: BadgeCheck },
-  { title: "Customer First", description: "Dedicated service and transparent communication focused on your peace of mind.", icon: HandHeart },
-  { title: "Communities That Care", description: "Environmentally responsible living designed for people and the planet.", icon: HeartHandshake },
-  { title: "Empowered Leadership", description: "Driven by visionary leadership, including award-winning entrepreneur Namrata Malu (2023).", icon: GraduationCap },
+  {
+    title: "Purpose-Driven Development",
+    description: "Thoughtfully planned spaces that stand the test of time.",
+    icon: Compass,
+  },
+  {
+    title: "Exceptional Craftsmanship",
+    description: "Meticulous attention to quality in every detail.",
+    icon: Sparkles,
+  },
+  {
+    title: "Complete Transparency",
+    description: "Clear communication and uncompromising integrity.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Sustainable by Design",
+    description: "Building responsibly for future generations.",
+    icon: Leaf,
+  },
+  {
+    title: "Timely Delivery",
+    description: "Projects delivered with discipline and commitment.",
+    icon: Clock,
+  },
+  {
+    title: "Enduring Value",
+    description: "Creating homes and communities that appreciate in both quality and worth.",
+    icon: TrendingUp,
+  },
 ];
 
 function Home() {
