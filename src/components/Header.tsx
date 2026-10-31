@@ -58,8 +58,7 @@ export function Header() {
             style={
               isTransparent
                 ? {
-                    filter:
-                      "drop-shadow(0 0 1px rgba(251, 241, 233, 0.95)) drop-shadow(0 0 8px rgba(251, 241, 233, 0.85)) drop-shadow(0 0 20px rgba(251, 241, 233, 0.5))",
+                    filter: "drop-shadow(0 1px 4px rgba(251, 241, 233, 0.4))",
                   }
                 : undefined
             }
