@@ -196,11 +196,7 @@ function Home() {
           })}
         </div>
 
-        {/* Cream gradient behind logo area only */}
-        <div
-          className="absolute top-0 left-0 w-96 sm:w-[480px] h-36 bg-gradient-to-br from-[#FBF1E9]/85 via-[#FBF1E9]/35 to-transparent pointer-events-none z-2 blur-2xl"
-          aria-hidden="true"
-        />
+
 
         {/* Floating Side Navigation Buttons */}
         <button
