@@ -196,14 +196,10 @@ function Home() {
           })}
         </div>
 
-        {/* Architectural grid overlay */}
+        {/* Cream gradient behind logo area only */}
         <div
-          className="absolute inset-0 opacity-[0.08] pointer-events-none z-2"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #FBF1E9 1px, transparent 1px), linear-gradient(to bottom, #FBF1E9 1px, transparent 1px)",
-            backgroundSize: "12vw 12vw",
-          }}
+          className="absolute top-0 left-0 w-96 sm:w-[480px] h-36 bg-gradient-to-br from-[#FBF1E9]/85 via-[#FBF1E9]/35 to-transparent pointer-events-none z-2 blur-2xl"
+          aria-hidden="true"
         />
 
         {/* Floating Side Navigation Buttons */}

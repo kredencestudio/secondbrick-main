@@ -50,9 +50,17 @@ export function Header() {
       }`}
     >
       <div className="container-x flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center group py-1" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Second Brick — Advise.Assist.Buy.Sell" className="h-10 sm:h-11 w-auto object-contain" />
-        </Link>
+        <div className="relative flex items-center">
+          {isTransparent && (
+            <div
+              className="absolute -left-6 sm:-left-10 -top-3.5 -right-10 -bottom-3.5 bg-gradient-to-r from-[#FBF1E9]/95 via-[#FBF1E9]/80 to-transparent rounded-2xl blur-md pointer-events-none -z-10"
+              aria-hidden="true"
+            />
+          )}
+          <Link to="/" className="flex items-center group py-1 relative z-10" onClick={() => setOpen(false)}>
+            <img src={logo} alt="Second Brick — Advise.Assist.Buy.Sell" className="h-10 sm:h-11 w-auto object-contain" />
+          </Link>
+        </div>
 
         <nav className="hidden lg:flex items-center gap-10">
           {nav.map((item) => (
