@@ -203,7 +203,7 @@ function About() {
           <div className="grid md:grid-cols-2 gap-10 md:gap-14">
             {leaders.map((l, i) => (
               <article key={l.name} className="flex flex-col group">
-                <div className="relative aspect-[4/3] max-w-md w-full overflow-hidden bg-cocoa/10">
+                <div className="relative aspect-square max-w-md w-full overflow-hidden bg-cocoa/10">
                   {l.image ? (
                     <img
                       src={l.image}
