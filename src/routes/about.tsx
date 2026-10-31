@@ -223,7 +223,6 @@ function About() {
                   </h3>
                   <div className="mt-5 w-14 h-px bg-brick" />
                   <p className="mt-5 text-base sm:text-lg leading-relaxed text-muted-foreground">{l.bio}</p>
-                  <div className="mt-6 font-serif italic text-2xl text-brick">— {l.initials}.</div>
                 </div>
               </article>
             ))}
