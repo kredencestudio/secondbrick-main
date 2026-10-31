@@ -196,7 +196,11 @@ function Home() {
           })}
         </div>
 
-
+        {/* Soft cream gradient across top behind navbar */}
+        <div
+          className="absolute top-0 inset-x-0 h-44 sm:h-52 bg-gradient-to-b from-[#FBF1E9] via-[#FBF1E9]/70 via-35% to-transparent pointer-events-none z-2"
+          aria-hidden="true"
+        />
 
         {/* Floating Side Navigation Buttons */}
         <button

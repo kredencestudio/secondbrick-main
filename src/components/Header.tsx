@@ -54,14 +54,7 @@ export function Header() {
           <img
             src={logo}
             alt="Second Brick — Advise.Assist.Buy.Sell"
-            className="h-10 sm:h-11 w-auto object-contain transition-all duration-300"
-            style={
-              isTransparent
-                ? {
-                    filter: "drop-shadow(0 1px 4px rgba(251, 241, 233, 0.4))",
-                  }
-                : undefined
-            }
+            className="h-10 sm:h-11 w-auto object-contain"
           />
         </Link>
 
@@ -71,20 +64,14 @@ export function Header() {
               <Link
                 to={item.to}
                 activeOptions={item.to === "/" ? { exact: true } : undefined}
-                className={`relative flex items-center gap-1 text-[13px] tracking-[0.14em] uppercase transition-colors py-2 font-medium ${
-                  isTransparent
-                    ? "text-cream/90 hover:text-cream drop-shadow-xs"
-                    : "text-cocoa hover:text-brick"
-                }`}
+                className="relative flex items-center gap-1 text-[13px] tracking-[0.14em] uppercase transition-colors py-2 font-medium text-cocoa hover:text-brick"
                 activeProps={{
-                  className: `${
-                    isTransparent ? "text-cream" : "text-brick"
-                  } font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-brick after:rounded-full`,
+                  className: "text-brick font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-brick after:rounded-full",
                 }}
               >
                 {item.label}
                 {item.children && (
-                  <ChevronDown className={`w-3.5 h-3.5 ${isTransparent ? "opacity-90 text-cream" : "opacity-60 text-cocoa"}`} />
+                  <ChevronDown className="w-3.5 h-3.5 opacity-60 text-cocoa" />
                 )}
               </Link>
               {item.children && (
@@ -115,7 +102,7 @@ export function Header() {
         </div>
 
         <button
-          className={`lg:hidden p-2 transition-colors ${isTransparent ? "text-cream" : "text-cocoa"}`}
+          className="lg:hidden p-2 transition-colors text-cocoa"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
