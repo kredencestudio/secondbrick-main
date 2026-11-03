@@ -189,18 +189,16 @@ function Home() {
                   alt={slide.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-out scale-100 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-cocoa via-cocoa/40 to-cocoa/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-cocoa via-cocoa/45 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-r from-cocoa/80 via-cocoa/35 to-transparent" />
               </div>
             );
           })}
         </div>
 
-        {/* Soft cream gradient across top behind navbar */}
-        <div
-          className="absolute top-0 inset-x-0 h-44 sm:h-52 bg-gradient-to-b from-[#FBF1E9] via-[#FBF1E9]/70 via-35% to-transparent pointer-events-none z-2"
-          aria-hidden="true"
-        />
+
+
+
 
         {/* Floating Side Navigation Buttons */}
         <button
